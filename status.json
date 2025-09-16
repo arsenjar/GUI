@@ -1,0 +1,8 @@
+{
+    "right": true,
+    "left": true,
+    "up": true,
+    "Down": true,
+    "Play" : false,
+    "Stop" : false
+}
