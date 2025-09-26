@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter.scrolledtext import ScrolledText
 from datetime import datetime
+import requests
 
 root = tk.Tk()
 root.title("GUI IN 4 QUADRANTS")
@@ -32,6 +33,9 @@ log_text = ScrolledText(frame4, wrap="word", font=("Consolas", 12))
 log_text.grid(row=0, column=0, sticky="nsew", padx=8, pady=8)
 
 def log(msg):
+    msg1 = msg.lower()
+    response = requests.get(f'http://127.0.0.1:5000/change_status/{msg1}')
+    print(response)
     ts = datetime.now().strftime("%H:%M:%S")
     log_text.insert("end", f"[{ts}] {msg}\n")
     log_text.see("end")

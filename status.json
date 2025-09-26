@@ -1,8 +1,1 @@
-{
-    "right": true,
-    "left": true,
-    "up": true,
-    "Down": true,
-    "Play" : false,
-    "Stop" : false
-}
+{"right": true, "left": false, "up": true, "down": true, "play": false, "stop": false}
